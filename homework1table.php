@@ -2,13 +2,15 @@
 
 <?php>
 
+
+
 $servername = "localhost"
 $username = "root"
 $password = "daebak123"
 $dbname = "HW1DB"
 
 
-$conn = mysql_connect($servername, $username, $password, $dbname);
+$conn = mysql_connect(localhost, jk293, $password, HW1DB);
 
 
 if(! $conn)
@@ -16,14 +18,22 @@ if(! $conn)
     die ('Could not connect: ' . mysql_error());
 }
 
-echo 'Connected Successfully<br />';
+echo 'Connected Successfully';
 
 
-$sql = "CREATE TABLE US_States ("id INT NOT NULL PRIMARY KEY AUTO_INCREMENT," "state Char(25)," "year INT(4)")";
+mysql_select_db("HW1DB", $conn);
 
-mysql_select_db( 'HW1DB' );
+$sql = "CREATE TABLE US_States (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+state Char(25),
+year INT(4)
+)";
 
-$query = "select * from USstates;";
+mysql_query();
+
+#$query = "select * from US_states;";
+
+/*
 
 $retval = mysql_query( $sql, $conn );
 
@@ -34,6 +44,7 @@ if (! $retval)
 
 echo "Table was created successfully";
 
+*/
 
 mysql_close($conn);
 
