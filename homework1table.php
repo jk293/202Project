@@ -10,7 +10,7 @@ $password = "daebak123"
 $dbname = "HW1DB"
 
 
-$conn = mysql_connect(localhost, jk293, password, HW1DB);
+$conn = mysql_connect("localhost", "jk293", "password", "HW1DB");
 
 
 if(! $conn)
