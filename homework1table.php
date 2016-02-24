@@ -3,36 +3,39 @@
 <?php>
 
 $servername = "localhost"
-$username = "jk293"
-$password = "password"
+$username = "root"
+$password = "daebak123"
 $dbname = "HW1DB"
 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = mysql_connect($servername, $username, $password, $dbname);
 
-if $conn->connect_error)
+
+if(! $conn)
 {
-    echo "Connection Failed:" . $conn->connect_error;
+    die ('Could not connect: ' . mysql_error());
 }
 
-//_--------------------------------------------------------
-
-$sql = "CREATE TABLE USstates (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, state Char(25), year INT(4))";
+echo 'Connected Successfully<br />';
 
 
-if ($conn->$query($sql) === TRUE)
+$sql = "CREATE TABLE US_States ("id INT NOT NULL PRIMARY KEY AUTO_INCREMENT," "state Char(25)," "year INT(4)")";
+
+mysql_select_db( 'HW1DB' );
+
+$query = "select * from USstates;";
+
+$retval = mysql_query( $sql, $conn );
+
+if (! $retval)
 {
-    echo "The table 'USstates' has been created";
-}else{
-    echo "There was an error creating the table" . $conn->error;
+    die ('Table could not be created: ' . mysql_error());
 }
 
-
-$conn->close();
-
+echo "Table was created successfully";
 
 
-
+mysql_close($conn);
 
 
 
