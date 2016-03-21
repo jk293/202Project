@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 require_once("error.php.inc");
 class clientDB

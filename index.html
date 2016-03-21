@@ -1,20 +1,14 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<H1> Welcome! Make an Essay With Other Users! </H1>
-<title>Sign-In</title>
-<link rel="stylesheet" type="text/css" href="style-sign.css">
+<meta char-set="utf-8">
+<title>Page title</title>
 </head>
-<body id="body-color">
-<div id="Sign-In">
-<fieldset style="width:30%"><legend>LOG-IN HERE</legend>
-<form method="POST" action="connectivity.php">
-User <br><input type="text" name="user" size="40"><br>
-Password <br><input type="password" name="pass" size="40"><br>
-<input id="button" type="submit" name="submit" value="Log-In">
+<body>
+<form action="rpc.php" method="post" >
+<p>username: <input type="text" name="username" /></p>
+<p>password: <input type ="password" name="password" /></p>
+<input type="submit" name="request" value="login"/>
 </form>
-</fieldset>
-</div>
 </body>
-</html> 
-
+</html>
