@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 require_once("clientDB.php.inc");
-$request = $_POST['request'];
+$request = isset($_POST['request']) ? $_POST['request']:
 $response = "FUCK<p>";
 switch($request)
 {
