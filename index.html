@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+h2 {
+    display: block;
+    font-size: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 5;
+    margin-right: 5;
+    font-weight: bold;
+    COLOR:green;
+    font-family:Courier;
+    
+}
+</style>
+
 <meta char-set="utf-8">
-<title>Page title</title>
-<h2> Welcome! Log In to Start Adding Sentences to Our Essays! <h2>
+<title> NE Essays! =) </title>
+<h2 style="text-align:center;font-size:150%"><i> Welcome! Log In to Start Adding Sentences to Our Essays! </i><h2>
 </head>
-<body>
+<body style=background-color:Black;">
+
 <form action="rpc.php" method="post" >
-<p>username: <input type="text" name="username" /></p>
-<p>password: <input type ="password" name="password" /></p>
-<input type="submit" name="request" value="login"/>
+<p style="font-size:80%; color:green;">username: <input type="text" name="username" /></p>
+<p style="font-size:80%; color:green;">password: <input type ="password" name="password" /></p>
+<input type="submit" name="request" value="Login"/>
 </form>
+
+<h2 style="font-size:100%; color:green;"> Don't Have An Account? Click Below to Get Started! ;)
+
+<form action="register.html" method="post" >
+<input type="submit" name="request" value="Register"/>
+</form>
+
 </body>
 </html>
