@@ -1,13 +1,14 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/
 css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-
 <link rel="stylesheet" type="text/css" href="mystyle.css">
+
 <style>
+
 form {
     color: white;
     text-align:center;
@@ -28,7 +29,6 @@ p {
 
 </style>
 </head>
-<body> 
 
 <ul>
   <li><a href="neverendingEssays.html">Home</a></li>
@@ -44,34 +44,37 @@ p {
 
 <title>NEVER-ENDING ESSAYS! c:</title>
 <div style="margin-left:15% ;padding: 1px 16px; height:1000px;">
-<!--<p> Log in Successful! </p>-->
-<h3> Welcome to Our Never Ending Essays! </h3>
+<title> NeverEndingESSAYS!</title>
 
-<p>Here You Can Add a Sentences to an Essay,</p>
-<p>Edit One of Your Last Sentences, 
-or Just Browse Through Any Essay! Enjoy! </p>
+
+<h3> Welcome to the Adding Section! <h3>
+<h3> Here You Can Add a Sentence into a Chosen Topic and Help Create <h3>
+<h3> a NEVER-ENDING ESSAY! YAY. <h3>
+<h2> Aight Do U. <h2>
+</head>
+<body style="background-color:black;">
+
+
+
+
+<hr />
+<div id="content">
+<form action="create_Sentence_code.php" method="post">
+<p>Sentences</p>
+<br /><br />
+<input type="text" name="cid"/>
+<input type="submit" name="sentence_submit" value="Add Sentence"/>
+
+</form> 
+
+
+
+<hr />
+
+
+<h2> You Can Be OUttiee by pressing this button. <h2>
+
+
 <h2> Jaywan - Out. <h2>
-</div>
-
-
-<!--<form action="browseneE.php" method="post" >
-<input type="submit" name="request" value="Browse"/>
-</form>
-
-<form action="create_Topic.php" method="post" >
-<input type="submit" name="request" value="Add"/>
-</form>
-
-<form action="editEssays.php" method="post" >
-<input type="submit" name="request" value="Edit"/>
-</form>
-
-<h2> Leaving? Click This Button. <h2>
-
-<form action="logoutneEssays.php" method="post" >
-<input type="submit" name="request" value="Log Out"/>
-</form> -->
-
-
 </body>
 </html>

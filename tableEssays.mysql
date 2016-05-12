@@ -1,0 +1,9 @@
+#!/usr/bin/php
+create table if not exists essays 
+  ( 
+    essay_id int(20) NOT NULL AUTO_INCREMENT, 
+    topic varchar(45) default null, 
+    start_date date default null, 
+    lastused_date date default null, 
+    primary key (essay_id)
+  );

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta char-set="utf-8">
+<title>Page title</title>
+</head>
+<body>
+<p>username: <input type="text" id="username" /></p>
+<p>password: <input type ="password" id="password" /></p>
+<button type="button" onclick="sendRequest()">Submit</button>
+
+<div id="output"></div>
+
+<script>
+var request;
+function sendRequest()
+{
+	var name = document.getElementById("username").value;
+	var pw = document.getElementById("password").value;
+	request = new XMLHttpRequest();
+	request.onreadystatechange = handleResponse;
+	request.open("POST","something.php",true);
+	request.setRequestHeader("Content-type","application/json");
+	var data = JSON.stringify({request:"login",username:name,password:pw});
+	request.send(data);
+}
+function handleResponse()
+{
+	document.getElementById("output").innerHTML = "<H1>GOT HERE</H1>"+
+		"<p>"+request.responseText+"</p>";
+}
+</script>
+</body>
+</html>

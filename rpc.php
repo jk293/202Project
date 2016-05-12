@@ -1,6 +1,11 @@
 <?php
 require_once("clientDB.php.inc");
 $request = $_POST['request'];
+// if (!$request)
+// {
+//     $request = file_get_contents
+// }
+
 $response = "OMG..........T^T<p>";
 
 switch($request)

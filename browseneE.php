@@ -2,49 +2,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/
+css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+
 <style>
-.cat_links {
-    display:block;
-    padding: 5px;
-    padding-top: 10px;
-    padding-botom: 10px;
-    border: 1px solid #000000;
-    margin-bottom: 5px;
-    background-color: #cccccc;
-    color: #000000;
-}
-.cat_links:hover {
-    background-color: #dddddd;
-}
-a {
-    color: #0000ff;
-}
-h2 {
+/*form {
+    color: white;
+    text-align:center;
+    display: inline-block;
+}*/
+
+a:link, a:visited {
     display: block;
-    font-size: 100%;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: 5;
-    margin-right: 5;
-    font-weight: bold;
-    color:green;
-    font-family:Courier;
-    a: 
+    color: black;
+    background-color: green;
+    padding: 14px 25px;
+    text-align: center;   
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: green;
+  border: 1px solid #555;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+p {
+  font-size:100%;
+}
+
 </style>
-<meta char-set="utf-8">
-<title> NeverEndingEssays</title>
+</head>
+<body>
+<ul>
+  <li><a href="neverendingEssays.html">Home</a></li>
+  <li><a href="browseneE.php">Browse</a></li>
+  <li><a href="create_Topic.php">Add</a></li>
+  <li><a href="editEssays.php">Edit</a></li>
+  <li><a href="...">Contact</a></li>
+  <li><a href="...">FAQs</a></li>
+  <li><a href="...">Donations</a></li>
+  <li><a href="...">News</a></li>
+  <li><a href="logoutneEssays.php">Log Out</a></li>
+</ul>
 
-<form action="neverendingEssays.html" method="post" >
-<input type="submit" name="request" value="Home"/>
-</form>
+<title>NEVER-ENDING ESSAYS! c:</title>
+<div style="margin-left:15% ;padding: 1px 16px; height:1000px;">
 
-<h2 style="font-size:110%; font-align:center;"> Welcome to the Browsing Section! Here You Can Browse and Check Out Some of the Essays. <h2>
+<h3> Login Successful! <h3>
+<h3> Welcome to the Browsing Section! <h3>
+<h3>Here You Can Browse and Check Out Some of the Essays. <h3>
 <h2> Aight Peace. <h2>
 </head>
-<body style="background-color:black;">
+<body>
 
-<hr />
+
+<p>Topics:</p>
 <div id="content">
 <?php
 include_once ("connect.php");
@@ -63,18 +84,12 @@ if (mysql_num_rows($res) > 0)
     }
     echo $top;
 } else {
-    "<p>There are no Topics yet.</p>";
+    echo "<p>There are no Topics yet.</p>";
+    echo "<p><a href='create_Topic.php?cid=".$cid."'>Create One</a></p>";
 }
 
 
 ?>
-</div>
-<hr /> 
-
-<h2 style="color:green; font-size:80%;"> If U Tir3d of dis plaze den u can loggout down hur.. >.> <h2>
-<form action="logoutneEssays.php" method="post" >
-<input type="submit" name="request" value="Log Out"/>
-</form>
 
 <h3 style="color:green;"> Jaywan - Out. <h3>
 </body>

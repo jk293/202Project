@@ -6,33 +6,12 @@
 <link rel="stylesheet" type="text/css" href="mystylesheet.css">
 
 <style>
-/*.cat_links {
-    display:block;
-    padding: 5px;
-    padding-top: 10px;
-    padding-botom: 10px;
-    border: 1px solid #000000;
-    margin-bottom: 5px;
-    background-color: #cccccc;
-    color: #000000;
+
+form {
+    color: white;
+    text-align:center;
+    display: inline-block;
 }
-.cat_links:hover {
-    background-color: #dddddd;
-}*/
-/*a {
-    color: #0000ff;
-}
-h2 {
-    display: block;
-    font-size: 100%;
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: 5;
-    margin-right: 5;
-    font-weight: bold;
-    color:green;
-    font-family:Courier;
-}*/
 
 a:link, a:visited {
     display: block;
@@ -47,7 +26,7 @@ p {
 }
 
 </style>
-<body style="background-color:black;">
+</head>
 
 <ul>
   <li><a href="neverendingEssays.html">Home</a></li>
@@ -61,17 +40,15 @@ p {
   <li><a href="logoutneEssays.php">Log Out</a></li>
 </ul>
 
-<!--<meta char-set="utf-8">-->
+<title>NEVER-ENDING ESSAYS! c:</title>
 <div style="margin-left:15% ;padding: 1px 16px; height:1000px;">
 <title> NeverEndingEssays</title>
 
 
-
-<h3> Welcome to the Browsing Section!<h3>
-<h3> Here You Can Browse and Check Out Some of the Essays. <h3>
+<h2 style="font-size:110%; font-align:center;"> Welcome to the Browsing Section! Here You Can Browse and Check Out Some of the Essays. <h2>
 <h2> Aight Peace. <h2>
 </head>
-
+<body style="background-color:black;">
 
 <div id="content">
 
@@ -123,13 +100,14 @@ if (mysql_num_rows($res) == 1)
 	echo $topics;	
 	
     } else {
-// 	echo "<a href='browseneE.php'>Back</a><hr />";
+	echo "<a href='browseneE.php'>Back</a><hr />";
 	echo "<p>There are no Essays in this topic yet.".$logged."</p>";
-	echo "<p><a href='create_Sentence.php?cid=".$cid."'>Create One</a></p>";
+	echo "<p><a href='crate_Sentence.php?cid=".$cid."'>Create One</a></p>";
     }
 } else {
     echo "<a href='browseneE.php'>Back to Browse</a><hr />";
-    echo "<p>Essay Does Not Exist</p>";
+    echo "<p>Topic has been created!</p>";
+    echo "<p>To start writing a sentence, <a href='create_Sentence.php?cid=".$cid."'>Click Here</a></p>";
 }
 
 
@@ -140,6 +118,11 @@ if (mysql_num_rows($res) == 1)
 </div>
 
 
-<h2> Jaywan - Out. <h2>
+<!--<h2 style="color:green; font-size:80%;"> If U Tir3d of dis plaze den u can loggout down hur.. >.> <h2>
+<form action="logoutneEssays.php" method="post" >
+<input type="submit" name="request" value="Log Out"/>
+</form>
+
+<h3 style="color:green;"> Jaywan - Out. <h3>
 </body>
-</html>
+</html>-->

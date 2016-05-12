@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/
+css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
 <style>
 h2 {
     display: block;
@@ -12,7 +17,11 @@ h2 {
     font-weight: bold;
     COLOR:green;
     font-family:Courier;
+    text-align:center;
     
+}
+h1, h3 {
+    text-align:center;
 }
 </style>
 
@@ -22,18 +31,18 @@ h2 {
 
 <body style="background-color:black;">
 
-<body>
-<h2 style="text-align:center; font-size:150%"><i> Register Here by Creating a Username and a Password! </i></h1>
 
-<form action="rpc.php" method="post" >
+<h3> Register Here by Creating a Username and a Password! <h3>
+
+<form style="text-align:center" action="rpc.php" method="post" >
 <p style="font-size:80%; color:green;">username: <input type="text" name="username" /></p>
 <p style="font-size:80%; color:green;">password: <input type ="text" name="password" /></p>
 <input type="submit" name="request" value="Register"/>
 </form>
 
-<h2 style="font-size:100%; font-align:center;"> Alrdy Hav an Accnt? Click dis buten dwn hur 2 go bck & login m'kay? </h2>
+<h3> Alrdy Hav an Accnt? Click dis buten dwn hur 2 go bck & login m'kay? <h3>
  
-<form action="index.html" method="post" >
+<form style="text-align:center" action="index.html" method="post" >
 <input type="submit" name="request" value="Login" />
 </form>
 

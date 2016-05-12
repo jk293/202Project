@@ -1,6 +1,6 @@
 #!usr/bin/php
 <?php
-require_once("clientDB.php.inc");
+require_once("clientAuth.php.inc");
 $command = $argv[1];
 switch($command)
 {

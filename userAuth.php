@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 require_once("clientDB.php.inc");
-$command = $argv[0];
+$command = $argv[1];
 switch($command)
 {
     case 'register':
